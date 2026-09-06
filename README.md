@@ -26,7 +26,7 @@ For all models and the Bayesian benchmark, confidence that the coin is rigged gr
 ![User Interface](figures/confidence_vs_riggedness.png) 
 
 Here is a heatmap that provides a more intuitive representation of the data:
-![User Interface](figures/evaluation_metrics_plot_gemini.png) 
+![User Interface](figures/heatmaps_comparison.png) 
 
 ## Approach
 

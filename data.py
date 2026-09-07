@@ -71,6 +71,10 @@ class FastCoinFlipDataset(Dataset):
         }
 
 
+# Backward compatibility alias
+CoinFlipDataset = FastCoinFlipDataset
+
+
 def collate_coin_flips(batch):
     lengths = [item["n"] for item in batch]
     max_len = max(lengths)

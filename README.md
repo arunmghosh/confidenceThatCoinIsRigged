@@ -3,7 +3,7 @@ I designed an experiment to test how confident AI algorithms are that a coin is 
 
 In addition to running the initial experiment, the user has the option to run a "coaxing experiment" to test how much they can swindle the AI algorithms with a rigged coin. The goal is to maximize profit over 100 rounds, over which the algorithms must be less than 90% confident that the coin is rigged. 
 
-[Blog link coming soon]
+Blog: https://medium.com/@electric.rockfan/swindling-ai-with-a-rigged-coin-until-it-notices-fd50da0db088
 
 ## Motivation
 We often hear that life is unfair, but one of the fairest ways people can think to decide trivial things is to flip a coin. Yet, we often take for granted that coins are fair. What if, much like reality, a given coin isn't fair? How would we know? How sure could we be that is isn't some statistical fluke? To answer these questions, I turned to AI. I wanted to see how much evidence the different proposed algorithms needed to be reasonably confident that the coin was in fact rigged. 

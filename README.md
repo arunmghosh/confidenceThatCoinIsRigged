@@ -46,6 +46,11 @@ Model B is the same model, but with a fixed context window of 20 flips (the most
 
 Model C is a 3-layer dense MLP with only takes in the summary statistics. 
 
+**Why a 1D CNN?**
+This was intended to test if knowing the order of flips had any value in shaping the confidence scores. The sliding window ensures that the same weights are applied to flips regardless of where they are in the sequence, since we only care about the length of streaks, not if said streak happened early or late in the trial. Also, this trains significantly faster than time-series models like RNNs.
+
+The 1D CNN has 3 layers, each expanding the length of streak each activation "sees". The first layer looks at three consecutive flips. The second layer takes consecutive bundles of those to get a streak length of five, and the third layer has a streak length of 9. This is a critical value because it is still under the minimum flip history length of 10. Essentially, if the model sees a lot of long streaks over time, it becomes more confident that the coin is rigged. 
+
 ### 3. Training & Evaluation
 The training dataset included 5.08 million individual coin flips, seen across 12 epochs. The labels (true P(heads)) were evenly split between fair and unfair, and the unfair degree was uniformly distributed from 0.51 to 0.95 (put into buckets shown above). All models were evaluated with 500 independent Monte Carlo trials per configuration, totaling 21,000 (500*42).   
 
